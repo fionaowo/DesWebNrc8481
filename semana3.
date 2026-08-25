@@ -8,7 +8,6 @@
 </head>
 <body class="bg-light">
 
-  <!-- ===================== NAVBAR ===================== -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Mi Catálogo de Juegos</a>
@@ -28,7 +27,6 @@
     </div>
   </nav>
 
-  <!-- ===================== CARRUSEL RESPONSIVO ===================== -->
   <div id="carruselJuegos" class="carousel slide mt-3" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carruselJuegos" data-bs-slide-to="0" class="active"></button>
@@ -60,7 +58,6 @@
     </button>
   </div>
 
-  <!-- ===================== SECCIÓN CATÁLOGO (JS DINÁMICO) ===================== -->
   <div class="container my-5" id="catalogo">
     <h3 class="mb-3">Catálogo (datos simulados de una API)</h3>
 
@@ -76,7 +73,6 @@
     <div id="detalleJuego" class="row"></div>
   </div>
 
-  <!-- ===================== MODAL LOGIN ===================== -->
   <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -102,7 +98,6 @@
     </div>
   </div>
 
-  <!-- ===================== FOOTER ===================== -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
     <p class="mb-0">© 2026 Proyecto Semana 3 - Desarrollo Web y Móvil</p>
   </footer>
