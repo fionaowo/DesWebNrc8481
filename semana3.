@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semana 3 - Catálogo de Juegos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mi Catálogo de Juegos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+        </ul>
+        <!-- Botón que abre el Modal de Login -->
+        <button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Iniciar sesión
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== CARRUSEL RESPONSIVO ===================== -->
+  <div id="carruselJuegos" class="carousel slide mt-3" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carruselJuegos" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carruselJuegos" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carruselJuegos" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex align-items-center justify-content-center bg-primary text-white" style="height:350px;">
+          <h2>Juego 1 destacado</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex align-items-center justify-content-center bg-danger text-white" style="height:350px;">
+          <h2>Juego 2 destacado</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex align-items-center justify-content-center bg-success text-white" style="height:350px;">
+          <h2>Juego 3 destacado</h2>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselJuegos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselJuegos" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- ===================== SECCIÓN CATÁLOGO (JS DINÁMICO) ===================== -->
+  <div class="container my-5" id="catalogo">
+    <h3 class="mb-3">Catálogo (datos simulados de una API)</h3>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label for="comboJuegos" class="form-label">Selecciona un juego:</label>
+        <!-- Este select (ComboBox) se llena vacío. Se rellena 100% con JS -->
+        <select id="comboJuegos" class="form-select"></select>
+      </div>
+    </div>
+
+    <!-- Aquí JS va a "pintar" la card del juego seleccionado usando createElement -->
+    <div id="detalleJuego" class="row"></div>
+  </div>
+
+  <!-- ===================== MODAL LOGIN ===================== -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Iniciar sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="loginEmail" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="loginPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            <p id="loginMsg" class="text-success mt-2 mb-0"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p class="mb-0">© 2026 Proyecto Semana 3 - Desarrollo Web y Móvil</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
